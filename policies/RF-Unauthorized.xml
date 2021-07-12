@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-Unauthorized">
+    <DisplayName>RF-Unauthorized</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json">
+                {
+                "Error":
+                {
+                    "Error_Code" : 401,
+                     "Error_check" : "UnAuthorized User"
+                }
+                }
+                </Payload>
+            <StatusCode>401</StatusCode>
+            <ReasonPhrase>Unauthorized User</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

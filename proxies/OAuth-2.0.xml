@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="OAuth-2.0">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>JavaScript-response</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="GenerateAccessToken-OAuth2.0">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-GenerateAccessToken-V20</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/access_token") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="GenerateAccessToken-grant-typeUsernamePassword">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-v20-1</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/access_token-password") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/v1/Oauth-Generate</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule/>
+</ProxyEndpoint>

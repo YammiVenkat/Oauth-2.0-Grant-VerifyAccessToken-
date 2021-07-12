@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="6" name="Oauth-Generate-AccessTokenDemo">
+    <Basepaths>/oauth-generate-accesstokendemo</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1625985910289</CreatedAt>
+    <CreatedBy>venkat.narayana1153r@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>Oauth-Generate-AccessTokenDemo</DisplayName>
+    <LastModifiedAt>1626014997326</LastModifiedAt>
+    <LastModifiedBy>venkat.narayana1153r@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:5393391489305247fcfebab443ea5c2f89ccc22904db86df710be481a2ed1e06f410cb79f3526e828c687c0dced66cfa2f365c445bf6e9d57b52a7506bf48bbf:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>JavaScript-response</Policy>
+        <Policy>OAuth-GenerateAccessToken-V20</Policy>
+        <Policy>OAuth-v20-1</Policy>
+        <Policy>OAuth-v20-VerifyAcessToken</Policy>
+        <Policy>RF-Unauthorized</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>OAuth-2.0</ProxyEndpoint>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-1.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
